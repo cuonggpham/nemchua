@@ -1,22 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import { Toaster } from "@/components/ui/sonner";
-import { AuthProvider } from "@/components/auth-provider";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  title: "Nemchua - Learn Japanese Vocabulary",
-  description: "A flashcard application for learning Japanese vocabulary with spaced repetition",
+  title: "Nemchua - Học từ vựng tiếng Nhật",
+  description: "Ứng dụng học từ vựng tiếng Nhật với hệ thống flashcard và thuật toán SRS (Spaced Repetition System)",
+  keywords: "học tiếng Nhật, từ vựng tiếng Nhật, flashcard, SRS, spaced repetition, Japanese vocabulary",
 };
 
 export default function RootLayout({
@@ -25,14 +19,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <AuthProvider>
+    <html lang="vi">
+      <body className={`${inter.variable} font-sans antialiased bg-gray-50 text-secondary-900`}>
+        <div className="min-h-screen">
           {children}
-        </AuthProvider>
-        <Toaster />
+        </div>
       </body>
     </html>
   );
