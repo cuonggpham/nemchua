@@ -20,8 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="vi">
-      <body className={`${inter.variable} font-sans antialiased bg-gray-50 text-secondary-900`}>
-        <div className="min-h-screen">
+      <body className={`${inter.variable} font-sans antialiased bg-gradient-to-br from-primary-50/50 via-white to-accent-50/30 text-secondary-900 min-h-screen`}>
+        <div className="min-h-screen backdrop-blur-sm">
           {children}
         </div>
       </body>

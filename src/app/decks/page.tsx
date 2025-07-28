@@ -2,9 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { Plus, Calendar, BookOpen, Trash2, Edit, Play } from 'lucide-react';
 import Header from '@/components/Header';
 import Card, { CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
+import Icon from '@/components/ui/Icon';
 
 interface Deck {
   _id: string;
